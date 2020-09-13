@@ -1,7 +1,6 @@
 FROM node:latest
 
 COPY . /amongus
-CD /amongus
-RUN yarn install
+RUN CD /amongus && yarn install
 
 CMD ["/bin/sh", "-c", "cd /amongus; yarn start;"]
